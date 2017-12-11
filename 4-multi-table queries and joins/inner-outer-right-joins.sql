@@ -69,7 +69,9 @@ EMPNO	ENAME	JOB	MGR	HIREDATE	SAL	COMM	DEPTNO	DEPTNO	DNAME	LOC
 
 
 
-
+SELECT * FROM (SELECT * FROM public.users WHERE uid = 'JHrKahi11lZDPsRqtMMoVcHEAnp1') users 
+LEFT JOIN (SELECT * FROM public.user_chat_posts WHERE user_id='JHrKahi11lZDPsRqtMMoVcHEAnp1') chatPosts 
+ON users.uid = chatPosts.user_id
 
 
 -- =============================
